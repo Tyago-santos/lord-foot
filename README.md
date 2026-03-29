@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lord Foot
 
-## Getting Started
+Aplicação web de delivery de comida, inspirada em plataformas como iFood. Permite que os usuários naveguem pelo cardápio, façam pedidos e acompanhem o status em tempo real.
 
-First, run the development server:
+## Tecnologias
+
+- **Next.js 16** - Framework React com SSR e App Router
+- **React 19** - Biblioteca de construção de interfaces
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 4** - Estilização utility-first
+
+## Rodar Localmente (Next.js)
 
 ```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Acessar http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodar com Docker
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Build da imagem
+docker build -t lord-foot .
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Executar container
+docker run -p 3000:3000 lord-foot
 
-## Learn More
+# Acessar http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts Disponíveis
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Script       | Descrição                        |
+|--------------|----------------------------------|
+| `npm run dev`   | Inicia servidor de desenvolvimento |
+| `npm run build` | Gera build de produção           |
+| `npm run start` | Inicia servidor de produção      |
+| `npm run lint`  | Executa linter ESLint            |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Funcionalidades
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Navegação pelo cardápio
+- [x] Adicionar itens ao carrinho
+- [x] Fazer pedidos
+- [ ] Acompanhar status do pedido
+- [ ] Cadastro de usuários
+- [ ] Área do restaurante
